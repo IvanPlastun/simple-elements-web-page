@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.text {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100px;
+}
+
+.input-wrap {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.input-wrap::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    bottom: 4px;
+    opacity: 0;
+    box-shadow: 0 0 32px 16px #fff;
+    transition: all linear 0.3s;
+}
+
+.input-wrap.input-wrap--shadow::before {
+    opacity: 1;
+}
+
+.input {
+    border: 0;
+    height: 100%;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.btn {
+    flex: 0 0 40px;
+    margin-left: auto;
+    height: 40px;
+    width: 40px;
+}
+
+#text {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
